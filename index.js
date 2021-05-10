@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === 'production') {
   // Exprees will serve up production assets
   UngDung.use(EXPRESS.static('client/build'));
   // Express serve up index.html file if it doesn't recognize route  
-  UngDung.get('*', (req, res) => {
+  UngDung.get('/', (req, res) => {
     res.sendFile(PATH.resolve(__dirname, 'client', 'built', 'index.html'));
   });
 }
